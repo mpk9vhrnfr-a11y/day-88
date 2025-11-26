@@ -1,15 +1,14 @@
-//
-//  main.c
-//  day 88
-//
-//  Created by Sanaa Kumar on 26/11/25.
-//
-
-#include <stdlib.h>
 #include <stdio.h>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
-    return EXIT_SUCCESS;
+enum Role {ADMIN, USER, GUEST};
+
+int main(void) {
+    enum Role r;
+    const char *names[] = {"ADMIN", "USER", "GUEST"};
+
+    for(r = ADMIN; r <= GUEST; r++)
+        printf("%s: %d\n", names[r], r);
+
+    return 0;
 }
+
